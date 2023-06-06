@@ -3,7 +3,8 @@
 
 <h4>Editar Detalhes do Produto</h4>
 <?php
-    include_once "../config/dbconnect.php";
+    session_start();
+    include("./conexao.php");
 	$ID=$_POST['record'];
 	$qry=mysqli_query($conn, "SELECT * FROM product WHERE product_id='$ID'");
 	$numberOfRow=mysqli_num_rows($qry);
