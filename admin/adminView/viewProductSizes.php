@@ -12,7 +12,8 @@
       </tr>
     </thead>
     <?php
-      include_once "../config/dbconnect.php";
+      session_start();
+      include("./conexao.php");
       $sql="SELECT * from product_size_variation v, product p, sizes s WHERE p.product_id=v.product_id AND v.size_id=s.size_id ";
       $result=$conn-> query($sql);
       $count=1;
