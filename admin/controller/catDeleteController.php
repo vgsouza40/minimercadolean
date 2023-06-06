@@ -1,6 +1,7 @@
 <?php
 
-    include_once "../config/dbconnect.php";
+    session_start();
+    include("./conexao.php");
     
     $c_id=$_POST['record'];
     $query="DELETE FROM category where category_id='$c_id'";
