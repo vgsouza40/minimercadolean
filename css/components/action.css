@@ -1,0 +1,18 @@
+.action{
+    display: inline-flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-right: 30px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+.action:before{
+    content: "";
+    background-color: #0D0D0D;
+    height: 10px;
+    width: 10px; 
+    margin-right: 10px;
+} 

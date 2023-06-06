@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 10px solid #999090;
+    padding: 10px 20px;
+}
+
+.header .button{
+    margin-right: 10px;
+}

@@ -1,0 +1,88 @@
+body{
+    background-color: #db8686e1;
+}
+
+.logo{
+    width: 60px;
+}
+
+header #botao-alterar-tema{
+    background: none;
+    border: none;
+}
+
+.imagem-botao:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.modo-escuro{
+    background-color: #333;
+    color: #fff;
+}
+
+.modo-escuro header{
+    background-color: #333;
+    color: #fff;
+}
+
+.modo-escuro .product{
+    color: #333;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.tittle{
+     display: flex;
+     justify-content: left;
+     font-size: 40px;
+}
+
+.catalogo{
+    justify-content: center;
+    margin-left: 200px;
+    margin-top: -650px;
+}
+    
+section{
+    flex-basis: 70%;
+}
+    
+aside{
+    flex-basis: 25%;
+}
+    
+.product{
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: left;
+    padding-left: 30px;
+}
+    
+.product img{
+    max-width: 100%;
+}
+    
+.product h3{
+    margin-top: 0;
+}
+    
+.product .price{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+    
+.product .description{
+    margin-bottom: 0;
+} 
+
+.texto{
+    margin-top: -860px;
+}
