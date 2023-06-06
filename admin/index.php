@@ -12,10 +12,6 @@
 <body >
     
         <?php
-  
-            session_start();
-            include("conexao.php");
-  
             include "./adminHeader.php";
             include "./sidebar.php";
            
