@@ -1,5 +1,6 @@
 <?php
-    include_once "../config/dbconnect.php";
+    session_start();
+    include("./conexao.php");
     
     if(isset($_POST['upload']))
     {
