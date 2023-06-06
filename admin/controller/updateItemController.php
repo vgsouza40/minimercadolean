@@ -1,5 +1,6 @@
 <?php
-    include_once "../config/dbconnect.php";
+    session_start();
+    include("./conexao.php");
 
     $product_id=$_POST['product_id'];
     $p_name= $_POST['p_name'];
