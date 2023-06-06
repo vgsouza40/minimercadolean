@@ -1,6 +1,8 @@
 <?php
 
-    include_once "../config/dbconnect.php";
+    session_start();
+    include("./conexao.php");
+
     $order_id=$_POST['record'];
     //echo $order_id;
     $sql = "SELECT pay_status from orders where order_id='$order_id'"; 
