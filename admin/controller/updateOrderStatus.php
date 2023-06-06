@@ -1,6 +1,7 @@
 <?php
 
-    include_once "../config/dbconnect.php";
+    session_start();
+    include("./conexao.php");
    
     $order_id=$_POST['record'];
     //echo $order_id;
