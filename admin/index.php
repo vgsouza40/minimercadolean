@@ -9,25 +9,89 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
   </head>
 </head>
-<body>
+<body >
+    
+        <?php
+  
+            session_start();
+            include("conexao.php");
+  
+            include "./adminHeader.php";
+            include "./sidebar.php";
+           
+            include_once "./config/dbconnect.php";
+        ?>
 
-<?php
-    session_start();
-    include("conexao.php");
+    <div id="main-content" class="container allContent-section py-4">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card">
+                    <i class="fa fa-users  mb-2" style="font-size: 70px;"></i>
+                    <h4 style="color:white;">Usuários Totais</h4>
+                    <h5 style="color:white;">
+                    <?php
+                        $sql="SELECT * from users where isAdmin=0";
+                        $result=$conn-> query($sql);
+                        $count=0;
+                        if ($result-> num_rows > 0){
+                            while ($row=$result-> fetch_assoc()) {
+                    
+                                $count=$count+1;
+                            }
+                        }
+                        echo $count;
+                    ?></h5>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            <div class="card">
+                    <i class="fa fa-th mb-2" style="font-size: 70px;"></i>
+                    <h4 style="color:white;">Produtos Totais</h4>
+                    <h5 style="color:white;">
+                    <?php
+                       
+                       $sql="SELECT * from product";
+                       $result=$conn-> query($sql);
+                       $count=0;
+                       if ($result-> num_rows > 0){
+                           while ($row=$result-> fetch_assoc()) {
+                   
+                               $count=$count+1;
+                           }
+                       }
+                       echo $count;
+                   ?>
+                   </h5>
+                </div>
+        </div>
+        
+    </div>
+       
+            
+        <?php
+            if (isset($_GET['category']) && $_GET['category'] == "success") {
+                echo '<script> alert("Feito")</script>';
+            }else if (isset($_GET['category']) && $_GET['category'] == "error") {
+                echo '<script> alert("Feito")</script>';
+            }
+            if (isset($_GET['size']) && $_GET['size'] == "success") {
+                echo '<script> alert("Feito")</script>';
+            }else if (isset($_GET['size']) && $_GET['size'] == "error") {
+                echo '<script> alert("Feito")</script>';
+            }
+            if (isset($_GET['variation']) && $_GET['variation'] == "success") {
+                echo '<script> alert("Variation Successfully Added")</script>';
+            }else if (isset($_GET['variation']) && $_GET['variation'] == "error") {
+                echo '<script> alert("Feito")</script>';
+            }
+        ?>
 
-    // Verificar se o usuário está autenticado
-    if (!isset($_SESSION['user_id'])) {
-        // Redirecionar para a página de login ou exibir uma mensagem de erro
-        header("Location: login.php"); // Substitua "login.php" pelo nome da página de login
-        exit;
-    }
 
-    include "./adminHeader.php";
-    include "./sidebar.php";
-    include_once "./config/dbconnect.php";
-?>
-
-<!-- Resto do seu código HTML/PHP -->
-
+    <script type="text/javascript" src="./assets/js/ajaxWork.js"></script>    
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 </body>
+ 
 </html>
