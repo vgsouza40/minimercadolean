@@ -12,10 +12,10 @@
 <body >
     
         <?php
+            session_start();
+            include("conexao.php");
             include "./adminHeader.php";
             include "./sidebar.php";
-           
-            include_once "./conexao.php";
         ?>
 
     <div id="main-content" class="container allContent-section py-4">
